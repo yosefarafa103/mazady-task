@@ -10,7 +10,7 @@ export async function handelFollowingUser(follower: number) {
   await new Promise((res) => {
     setTimeout(() => {
       handlFollow();
-      res("sucess");
+      res("success");
     }, TIMEPERSECOUNDS * 1000);
   });
   handelPending(null);

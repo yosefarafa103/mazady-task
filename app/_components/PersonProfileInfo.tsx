@@ -20,9 +20,9 @@ interface PersonDetail {
 const PersonProfileInfo = () => {
     const userDetails: PersonDetail[] = [{ icon: followingNumber, number: user.following, title: "Following", }, { icon: followers, number: user.followers, title: "Followers", }, { icon: rating, number: 23, title: "Rating", rating: 15 }]
     const isFollwoing = userStore((state) => state.isFollwing);
-    const setisFollwing = userStore((state) => state.setFollowing);
-    const isPending = userStore((state) => state.isPending);
-    const followerNumber = userStore((state) => state.followersNumber)!;
+    const setisFollwing: (val: boolean | null) => void = userStore((state) => state.setFollowing);
+    const isPending: boolean = userStore((state) => state.isPending)!;
+    const followerNumber: number = userStore((state) => state.followersNumber)!;
     const followUser = useCallback(async () => {
         await handelFollowingUser(followerNumber)
     }, [isFollwoing, followerNumber])
@@ -47,7 +47,7 @@ const PersonProfileInfo = () => {
                     <PersonDetail userData={followerNumber} key={el.title} rating={el.rating} number={el.number} title={el.title} icon={el.icon} />
                 ))}
             </section>
-            <Button classname={`${isFollwoing && "pointer-events-none opacity-[0.5] "}`} handlerFn={followUser}>
+            <Button isPending={isPending} classname={`${isFollwoing && "pointer-events-none opacity-[0.5] "}`} handlerFn={followUser}>
                 {isPending === true ? `Follwing ${user.username}...` : isFollwoing ? "Follwing" : "Follow"}
             </Button>
         </BoxContainer>
