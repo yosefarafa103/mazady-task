@@ -1,7 +1,7 @@
 import Image from "next/image"
-import notification from "@/app/_assets/notification.png"
-import search from "@/app/_assets/search-normal.png"
-import girl from "@/app/_assets/girl.png"
+import notification from "../_assets/notification.png"
+import search from "../_assets/search-normal.png"
+import girl from "../_assets/girl.png"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -9,7 +9,7 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "../../components/ui/dropdown-menu"
 
 const UsersIcons = () => {
     return (

@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image"
 import Logo from "../_atoms/Logo"
 import NavbarRight from "./NavbarRight"
 import NavigationLinks from "./NavigationLinks"
-import bars from "@/app/_assets/menu.png"
+import bars from "../_assets/menu.png"
 const Header = () => {
     return (
         <header className="bg-white px-[3.4vw] py-[20px] flex items-center justify-between">
