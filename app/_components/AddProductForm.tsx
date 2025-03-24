@@ -19,7 +19,6 @@ const AddProductForm = () => {
     const { products } = useProductsStore(s => s)
     const setViewButton = useProductsStore(s => s.setViewButton)
     const pushNewProduct = useProductsStore(s => s.pushNewProduct)!
-
     useEffect(() => {
     }, [products]);
     const categoriesArr: Categories<SubCategories>[] = useMemo(() => [
@@ -155,8 +154,6 @@ const AddProductForm = () => {
                     }
                 </section>
             </form>
-            {/*  */}
-            {/* (currentSelect&& subSelect) */}
             <Button classname="my-3" handlerFn={() => pushNewProduct(!(currentSelect && subSelect) ? { productName: otherVal } : { productName: `${categoriesArr[currentSelect as number].value} ${subSelect?.value}`, price: 1000 })}>Submit</Button>
             <section className="my-10  p-3">
                 {products?.map((e: Product) => (
