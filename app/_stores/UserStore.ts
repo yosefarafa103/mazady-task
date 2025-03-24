@@ -3,7 +3,7 @@ import { user } from "../_constants/user";
 type PendingFollow = boolean | null;
 interface UserStore {
   isFollwing: boolean;
-  setFollowing: () => number;
+  setFollowing: () => void;
   setIsPending: (val: PendingFollow) => void;
   followersNumber?: number;
   isPending: PendingFollow;
@@ -17,7 +17,6 @@ export const userStore = create<UserStore>((set, get) => ({
       isFollwing: !s.isFollwing,
       followersNumber: s.followersNumber!++,
     }));
-    // return get().followersNumber!;
   },
   setIsPending(val) {
     set((s) => {
