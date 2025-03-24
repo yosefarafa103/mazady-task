@@ -4,7 +4,7 @@ const ProductItem = ({ product }: { product: Product }) => {
     return (
         <section className="flex gap-[16px] p-[8px] ">
             <div className="max-sm:max-w-[87px] max-sm:min-w-[87px] sm:min-w-[145px] sm:max-w-[145px] sm:min-h-[127px] sm:max-h-[127px] max-sm:h-[72px]  relative ">
-                <img alt={`${product.productName}`} src={product.img?.src!} className="rounded-[28px] top-0 left-0 object-cover absolute w-full h-full select-none" />
+                <img alt={`${product.productName}`} src={product?.img?.src!} className="rounded-[28px] top-0 left-0 object-cover absolute w-full h-full select-none" />
                 <div className="size-[30px] z-[99] relative bg-white rounded-[50%] flex items-center justify-center sm:hidden top-2 left-2">
                     <LikeButton />
                 </div>
@@ -21,7 +21,7 @@ const ProductItem = ({ product }: { product: Product }) => {
                 <div className="flex  gap-2 max-sm:flex-col">
                     <h3 className="text-[#828282] capitalize">Lot starts in</h3>
                     <div className="flex items-center gap-2 ">
-                        {product.descountInto.map(el => (
+                        {product?.descountInto?.map(el => (
                             <LotStarts val={el} />
                         ))}
                     </div>

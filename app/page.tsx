@@ -8,7 +8,7 @@ import ProductsContainer from "./_components/ProductsContainer";
 import QrCodePart from "./_components/QrCodePart";
 import RecourceDataContainer from "./_components/RecourceDataContainer";
 export default async function Home() {
-  console.log(await getAllCategrories()) // Server Action Result
+  // console.log(await getAllCategrories()) // Server Action Result
   return (
     <>
       <Header />

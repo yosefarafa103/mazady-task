@@ -8,10 +8,10 @@ import img5 from "@/app/_assets/products/b3bf04a5851b3db639ef84c591c167ef.jpg";
 import img6 from "@/app/_assets/products/e6c6f653a71f3343ab26fca8d573f90e.jpg";
 export interface Product {
   productName: string;
-  price: number;
-  descountInto: string[];
+  price?: number;
+  descountInto?: string[];
   img?: StaticImageData;
-  discountType: "hotSale" | "liveAuction";
+  discountType?: "hotSale" | "liveAuction";
 }
 
 export const products: Product[] = [
