@@ -19,6 +19,7 @@ const AddProductForm = () => {
     const { products } = useProductsStore(s => s)
     const setViewButton = useProductsStore(s => s.setViewButton)
     const pushNewProduct = useProductsStore(s => s.pushNewProduct)!
+
     useEffect(() => {
     }, [products]);
     const categoriesArr: Categories<SubCategories>[] = useMemo(() => [
